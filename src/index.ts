@@ -1,5 +1,10 @@
 import fs from "fs";
 
-export function booleanTest(bool: boolean): boolean {
-  return bool;
-}
+const matches = fs
+  .readFileSync("football.csv", {
+    encoding: "utf-8",
+  })
+  .split("\n")
+  .map((row: string): string[] => row.split(","));
+
+console.log(matches);
