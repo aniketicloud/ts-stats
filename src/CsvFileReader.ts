@@ -1,16 +1,4 @@
 import fs from "fs";
-import { MatchResult } from "./MatchResult";
-
-// tuple for one row data
-export type MatchData = [
-  Date,
-  string,
-  string,
-  number,
-  number,
-  MatchResult,
-  string
-];
 
 export abstract class CsvFileReader<T> {
   // data is 2d array [][]
