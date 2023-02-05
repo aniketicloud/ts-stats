@@ -3,15 +3,7 @@ import { MatchResult } from "./MatchResult";
 import { dateStringToDate } from "./utils";
 
 // tuple for one row of a Match
-export type MatchData = [
-  Date,
-  string,
-  string,
-  number,
-  number,
-  MatchResult,
-  string
-];
+type MatchData = [Date, string, string, number, number, MatchResult, string];
 
 export class MatchReader extends CsvFileReader<MatchData> {
   mapRow(row: string[]): MatchData {
